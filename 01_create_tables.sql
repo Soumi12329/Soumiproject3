@@ -1,4 +1,4 @@
-create table Customers(
+create table customers(
     customer_id INTEGER Primary Key,
     customer_name VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE,
@@ -6,13 +6,15 @@ create table Customers(
     created_date DATE
 );
 
-create table Loans(
+-- always create constrains table level not column level
+
+create table loans(
     loan_id INTEGER Primary Key,
-    customer_id INTEGER REFERENCES Customers(customer_id),
+    customer_id INTEGER REFERENCES customers(customer_id),
     loan_type VARCHAR(20),
     loan_amount NUMERIC(12,2),
     outstanding_amount NUMERIC(12,2),
-    status VARCHAR(20)
+    status VARCHAR(20) -- add condition check constraint for status column
 );
 
 

@@ -1,4 +1,4 @@
-INSERT INTO Customers
+INSERT INTO customers
     (customer_id, customer_name, email, phone, created_date)
 VALUES
     (11, 'Michael Clark', 'michael.clark@gmail.com', '9876500011', '2026-01-08'),
@@ -8,7 +8,7 @@ VALUES
     (15, 'James Anderson', 'james.anderson@gmail.com', '9876500015', '2026-05-16');
 
 
-INSERT INTO Loans
+INSERT INTO loans
     (loan_id,customer_id,loan_type,loan_amount,outstanding_amount,status)
 VALUES
     (201, 11, 'HOME',      500000, 450000, 'ACTIVE'),

@@ -3,7 +3,7 @@ RETURNS INTEGER
 LANGUAGE plpgsql
 AS $$
 DECLARE
-      v_outstanding_amount = NUMERIC;
+      v_outstanding_amount = NUMERIC; -- fix this
 
 BEGIN
     SELECT outstanding_amount
@@ -11,7 +11,7 @@ BEGIN
        FROM loans
     WHERE loan_id = p_loan_id;
 
-   F NOT FOUND THEN 
+   F NOT FOUND THEN  -- fix this one
         RAISE EXCEPTION 'Loan % not found', p_loan_id; 
     END IF;
 
