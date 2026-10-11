@@ -6,7 +6,7 @@ create table customers(
     created_date DATE
 );
 
--- always create constrains table level not column level
+
 
 create table loans(
     loan_id INTEGER Primary Key,
@@ -14,7 +14,7 @@ create table loans(
     loan_type VARCHAR(20),
     loan_amount NUMERIC(12,2),
     outstanding_amount NUMERIC(12,2),
-    status VARCHAR(20) -- add condition check constraint for status column
+    status VARCHAR(20) CHECK (status IN ('ACTIVE', 'CLOSE'))
 );
 
 
